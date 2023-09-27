@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">IloveBooksV2XR</string>
+    <string-array name="soy">
+        <item> Genero </item>
+        <item> Hombre </item>
+        <item> Mujer </item>
+    </string-array>
 </resources>

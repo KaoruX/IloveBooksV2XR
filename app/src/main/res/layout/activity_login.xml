@@ -40,9 +40,10 @@
         android:text="Recordarme" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/b2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="extrellas"
         android:text="Ingresar" />
 
     <Button
@@ -51,4 +52,9 @@
         android:layout_height="wrap_content"
         android:onClick="menu"
         android:text="Temporal" />
+
+    <RatingBar
+        android:id="@+id/rex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
