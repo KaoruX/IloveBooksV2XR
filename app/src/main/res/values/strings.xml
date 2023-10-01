@@ -5,4 +5,10 @@
         <item> Hombre </item>
         <item> Mujer </item>
     </string-array>
+
+    <string-array name="Categorias">
+        <item> Misterio </item>
+        <item> Terror </item>
+        <item> Aventura </item>
+    </string-array>
 </resources>

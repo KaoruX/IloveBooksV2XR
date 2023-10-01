@@ -37,4 +37,22 @@ public class MainActivity extends AppCompatActivity {
         Intent aux = new Intent(this,Login.class);
         startActivity(aux);
     }
+
+    public void CrearLibro(View v){
+        Intent aux = new Intent(this,CrearLibro.class);
+        startActivity(aux);
+    }
+    public void EditarLibro(View v){
+        Intent aux = new Intent(this,EditarLibro.class);
+        startActivity(aux);
+    }
+    public void VerLibro(View v){
+        Intent aux = new Intent(this,VerLibro.class);
+        startActivity(aux);
+    }
+    public void Admin(View v){
+        Intent aux = new Intent(this,Admin.class);
+        startActivity(aux);
+    }
+
 }

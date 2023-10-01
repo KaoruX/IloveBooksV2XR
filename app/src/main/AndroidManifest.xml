@@ -13,6 +13,18 @@
         android:theme="@style/Theme.IloveBooksV2XR"
         tools:targetApi="31">
         <activity
+            android:name=".VerLibro"
+            android:exported="false" />
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
+            android:name=".EditarLibro"
+            android:exported="false" />
+        <activity
+            android:name=".CrearLibro"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
