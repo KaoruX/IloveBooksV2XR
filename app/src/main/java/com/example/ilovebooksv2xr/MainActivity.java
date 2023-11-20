@@ -6,6 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 public class MainActivity extends AppCompatActivity {
+    public static String LlaveHistoria;
+    public static String LlaveUsuario;
+
+    //Todo esto esta relacionado con la historia para el Books
+
+    public static String contenidoHistoria;
+    public static String autorHistoria;
+    public static int ActivoHistoria;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,33 +35,6 @@ public class MainActivity extends AppCompatActivity {
     public void buscador(View v){
         Intent bu = new Intent(this,Buscador.class);
         startActivity(bu);
-    }
-
-    public void aux1(View v){
-        Intent aux = new Intent(this,Register.class);
-        startActivity(aux);
-    }
-
-    public void aux2(View v){
-        Intent aux = new Intent(this,Login.class);
-        startActivity(aux);
-    }
-
-    public void CrearLibro(View v){
-        Intent aux = new Intent(this,CrearLibro.class);
-        startActivity(aux);
-    }
-    public void EditarLibro(View v){
-        Intent aux = new Intent(this,EditarLibro.class);
-        startActivity(aux);
-    }
-    public void VerLibro(View v){
-        Intent aux = new Intent(this,VerLibro.class);
-        startActivity(aux);
-    }
-    public void Admin(View v){
-        Intent aux = new Intent(this,Admin.class);
-        startActivity(aux);
     }
 
 }

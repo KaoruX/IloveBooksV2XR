@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "493305363773",
+    "firebase_url": "https://programacionandroid-b32d0-default-rtdb.firebaseio.com",
+    "project_id": "programacionandroid-b32d0",
+    "storage_bucket": "programacionandroid-b32d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493305363773:android:a243f894349f985b1d5954",
+        "android_client_info": {
+          "package_name": "com.example.ilovebooksv2xr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFDb8xEYdcRjhX9l8Yj7nsRve6VXQ06O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
