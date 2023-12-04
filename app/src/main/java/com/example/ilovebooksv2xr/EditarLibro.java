@@ -61,7 +61,7 @@ public class EditarLibro extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EditarLibro.this, MainActivity.class);
+                Intent intent = new Intent(EditarLibro.this, HistoriasDeUsuario.class);
                 startActivity(intent);
             }
         });
@@ -85,7 +85,7 @@ public class EditarLibro extends AppCompatActivity {
     private void eliminarHistoria(){
         databaseReference.child("Historia").child(MainActivity.LlaveHistoria).removeValue();
         Toast.makeText(this, "La historia ha sido eliminada", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(EditarLibro.this, mybooks.class);
+        Intent intent = new Intent(EditarLibro.this, HistoriasDeUsuario.class);
         startActivity(intent);
     }
 
@@ -116,7 +116,9 @@ public class EditarLibro extends AppCompatActivity {
 
                     databaseReference.child("Historia").child(h.getTitulo()).setValue(h);
 
-                    Intent intent = new Intent(EditarLibro.this, mybooks.class);
+                    Toast.makeText(EditarLibro.this, "Historia Actualizada", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(EditarLibro.this, HistoriasDeUsuario.class);
                     startActivity(intent);
                 }else{
                     boolean aux = false;
@@ -139,7 +141,7 @@ public class EditarLibro extends AppCompatActivity {
                         //Eliminamos
                         databaseReference.child("Historia").child(MainActivity.LlaveHistoria).removeValue();
 
-                        Intent intent = new Intent(EditarLibro.this, mybooks.class);
+                        Intent intent = new Intent(EditarLibro.this, HistoriasDeUsuario.class);
                         startActivity(intent);
                     }
                 }

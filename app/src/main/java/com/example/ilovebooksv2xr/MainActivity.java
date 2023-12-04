@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buscador(View v){
-        Intent bu = new Intent(this,Buscador.class);
+        Intent bu = new Intent(this, Buscador.class);
         startActivity(bu);
     }
 

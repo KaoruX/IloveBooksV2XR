@@ -17,8 +17,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.UUID;
-
 public class CrearLibro extends AppCompatActivity {
 
     FloatingActionButton fab;
@@ -50,7 +48,7 @@ public class CrearLibro extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CrearLibro.this, MainActivity.class);
+                Intent intent = new Intent(CrearLibro.this, HistoriasDeUsuario.class);
                 startActivity(intent);
             }
         });
@@ -89,7 +87,7 @@ public class CrearLibro extends AppCompatActivity {
                     historiaNueva.setAutor(MainActivity.LlaveUsuario);
 
                     databaseReference.child("Historia").child(tituloHistoria).setValue(historiaNueva);
-                    Intent intent = new Intent(CrearLibro.this, mybooks.class);
+                    Intent intent = new Intent(CrearLibro.this, MainActivity.class);
                     startActivity(intent);
                 }
             }

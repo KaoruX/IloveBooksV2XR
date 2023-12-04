@@ -68,9 +68,9 @@ public class Register extends AppCompatActivity {
 
                 for (DataSnapshot objSnaptshot : snapshot.getChildren()){
                     User p = objSnaptshot.getValue(User.class);
-
                     if(p.getUser().equals(user.getText().toString())){
                         ban = false;
+                        break;
                     }else{ ban = true; }
 
                 }

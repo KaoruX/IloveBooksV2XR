@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
@@ -57,7 +58,7 @@ public class Perfil extends AppCompatActivity {
         ButtonMyBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, mybooks.class);
+                Intent intent = new Intent(Perfil.this, HistoriasDeUsuario.class);
                 startActivity(intent);
             }
         });
