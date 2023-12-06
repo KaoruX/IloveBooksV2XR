@@ -20,8 +20,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class Mqtt extends AppCompatActivity {
 
     FloatingActionButton fab;
-    private static final String BROKER_URL = "mqtt://androidteststiqq.cloud.shiftr.io:1883";
-    private static final String CLIENT_ID = "1883";
+    private static final String BROKER_URL = "tcp://androidteststiqq.cloud.shiftr.io:1883";
+    private static final String CLIENT_ID = "DR";
     private MqttHandler mqttHandler;
     private EditText editTextMensaje;
     private TextView textViewMostrarMensaje;
@@ -42,6 +42,8 @@ public class Mqtt extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 textViewMostrarMensaje.setText(editTextMensaje.getText().toString());
+                publishMessage("Tema1",editTextMensaje.getText().toString());
+                subscribeToTopic("Tema1");
             }
         });
 
@@ -52,27 +54,6 @@ public class Mqtt extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        //Preguntar a profesor si esta bien colocado.
-
-        mqttClient.setCallback(new MqttCallback() {
-            @Override
-            public void connectionLost(Throwable cause) {
-                // Manejar pérdida de conexión
-            }
-            @Override
-            public void messageArrived(String topic, MqttMessage message) throws Exception {
-                // Este método se llama cuando se recibe un mensaje en el tema suscrito
-                String messageText = new String(message.getPayload());
-                // Muestra el mensaje con un Toast
-                Toast.makeText(Mqtt.this, messageText, Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void deliveryComplete(IMqttDeliveryToken token) {
-                // Este método se llama cuando se ha entregado un mensaje (por ejemplo, después de publicar un mensaje)
-            }
-        });
-
 
     }
 

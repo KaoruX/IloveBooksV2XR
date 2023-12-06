@@ -37,4 +37,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(bu);
     }
 
+    public void Bmqtt(View v){
+        Intent bu = new Intent(this, Mqtt.class);
+        startActivity(bu);
+    }
+
 }
